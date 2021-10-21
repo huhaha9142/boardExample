@@ -61,3 +61,12 @@ WHERE
 	bno = 1;
 	
 select * from tbl_board;
+
+UPDATE tbl_board
+	set
+		title = '수정된 테스트 제목1',
+		content = '수정된 테스트 내용',
+		writer = '수정된 작성자'
+	WHERE bno = 1;
+	
+SELECT * FROM tbl_board;
