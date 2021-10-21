@@ -29,3 +29,35 @@ create table tbl_board(
 commit;
 
 select * from tbl_board;
+
+# 임시 테이블 데이터
+insert into tbl_board(title, content, writer)
+  values('테스트 제목1', '테스트 내용', '작성자');
+
+insert into tbl_board(title, content, writer)
+  values('테스트 제목2', '테스트 내용', '작성자');
+
+insert into tbl_board(title, content, writer)
+  values('테스트 제목3', '테스트 내용', '작성자');
+
+insert into tbl_board(title, content, writer)
+  values('테스트 제목4', '테스트 내용', '작성자');
+
+insert into tbl_board(title, content, writer)
+  values('테스트 제목5', '테스트 내용', '작성자');
+  
+insert into tbl_board(title, content, writer)
+  values('test title', 'test content', 'test writer');
+
+commit;
+
+select * from tbl_board;
+
+SELECT
+	bno, title, content, writer, regDate, viewCnt
+FROM
+	tbl_board
+WHERE
+	bno = 1;
+	
+select * from tbl_board;
