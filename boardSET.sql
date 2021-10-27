@@ -32,7 +32,7 @@ select * from tbl_board;
 
 # 임시 테이블 데이터
 insert into tbl_board(title, content, writer)
-  values('테스트 제목1', '테스트 내용', '작성자');
+  values('테스트 제목1', '테스트 내용', 'board작성자');
 
 insert into tbl_board(title, content, writer)
   values('테스트 제목2', '테스트 내용', '작성자');
@@ -70,3 +70,22 @@ UPDATE tbl_board
 	WHERE bno = 1;
 	
 SELECT * FROM tbl_board;
+
+DELETE
+	FROM tbl_board
+WHERE bno =2;
+
+SELECT * FROM tbl_board;
+
+insert into tbl_board(title, content, writer)
+  select title, content, writer from tbl_board;
+  
+SELECT COUNT(bno) FROM tbl_board;
+
+select 
+  bno, title, writer, regDate, viewCnt
+from tbl_board
+order by bno DESC
+LIMIT 20, 10
+
+SELECT COUNT(bno) FROM tbl_board;
